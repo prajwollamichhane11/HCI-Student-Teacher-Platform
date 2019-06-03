@@ -49,6 +49,7 @@
 								{% block content %}
 								{% if user.is_authenticated %}
 									{{user.username}}<a href="{% url 'logout'%}">Logout</a>
+									<li><a href="{% static 'dash.html' %}">Dashboard</a></li>
 								{% else %}
 									<a href="{% url 'login' %}">Login</a>
 								{% endif %}
