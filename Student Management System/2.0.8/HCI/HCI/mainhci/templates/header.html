@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="{% static 'img/fav.png' %}">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Education</title>
+
+		<!--
+		CSS
+		============================================= -->
+		<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+		<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+		<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+		<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+		<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+		<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	</head>
+	<body>
+	  <header id="header" id="home" style="background-color:rgba(0,0,0,1);opacity:0.6">
+	    <div class="container main-menu">
+	    	<div class="row align-items-center justify-content-between d-flex">
+		      <div id="logo">
+		        <a href="{% static 'index.html' %}"><img src="img/logo.png" alt="" title="" /></a>
+		      </div>
+		      <nav id="nav-menu-container">
+		        <ul class="nav-menu">
+							<li><a href="/travello/index">Home</a></li>
+		          <li><a href="/travello/about">About</a></li>
+		          <li><a href="/travello/courses">Courses</a></li>
+		          <li><a href="/travello/blogs">Blogs</a></li>
+							<li class="menu-has-children"><a href="/accounts/login">
+
+								{% block content %}
+								{% if user.is_authenticated %}
+									{{user.username}}<a href="{% url 'logout'%}">Logout</a>
+									<li><a href="{% static 'dash.html' %}">Dashboard</a></li>
+								{% else %}
+									<a href="{% url 'login' %}">Login</a>
+								{% endif %}
+								{% endblock %}
+
+							</a></li>
+		        </ul>
+		      </nav><!-- #nav-menu-container -->
+	    	</div>
+	    </div>
+	  </header><!-- #header -->
+
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
