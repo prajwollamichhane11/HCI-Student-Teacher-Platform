@@ -12,6 +12,7 @@ urlpatterns=[
     path("index/",views.index,name="index"),
     path("about/",views.about,name="about"),
     path("courses/",views.courses,name="courses"),
-    path("blog/",views.blog,name="blog"),
+    path("blogs/",views.blogs,name="blogs"),
     path("contact/",views.contact,name="contact"),
+    path("dash/",views.dash,name="dash"),
 ]
