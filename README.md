@@ -1,1 +1,0 @@
-# HCI-Student-Teacher-Platform
